@@ -66,7 +66,7 @@ export class MatAvatarComponent implements OnChanges, OnDestroy {
     this._imgIsVisible.next(value);
   }
   onLoad(value: boolean): void {
-    this.imgIsVisible = value; console.log(value);
+    this.imgIsVisible = value;
   }
 
   constructor(public el: ElementRef, private render: Renderer2) {

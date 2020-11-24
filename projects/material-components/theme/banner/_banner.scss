@@ -1,0 +1,58 @@
+@mixin graphic-shape-radius($shape-radius: 50%) {
+  .mat-banner__graphic {
+    border-radius: $shape-radius;
+  }
+}
+
+@mixin min-width($min-width, $mobile-breakpoint: 480px) {
+  .mat-banner__content,
+  .mat-banner__fixed {
+    min-width: $min-width;
+    @media (max-width: $mobile-breakpoint), (max-width: $min-width) {
+      min-width: 100%;
+    }
+  }
+}
+
+@mixin max-width($max-width) {
+  .mat-banner__content {
+    max-width: $max-width;
+  }
+}
+
+@mixin position-centered {
+  .mat-banner__content {
+    left: 0;
+    margin-left: auto;
+    margin-right: auto;
+    right: 0;
+  }
+}
+
+@mixin mobile-stacked {
+  @media (max-width: 480px) {
+    .mat-banner__content {
+      flex-wrap: wrap;
+    }
+    .mat-banner__graphic {
+      margin-bottom: 12px;
+    }
+    .mat-banner__text {
+      margin: 16px 8px;
+      padding-bottom: 4px;
+    }
+    .mat-banner__actions {
+      margin-left: auto;
+    }
+  }
+}
+
+@mixin z-index($z-index: 1) {
+  z-index: 1;
+}
+
+@mixin fixed-width($width) {
+  .mat-banner__fixed {
+    width: $width;
+  }
+}

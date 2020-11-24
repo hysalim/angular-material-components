@@ -5,7 +5,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Components
 |Components|Links|
 |----------|-----|
-|Avatar|[Documentation](https://githhub.com/hysalim/angular-material-components/projects/src/lib/avatar/README.md)
+|Avatar|[Documentation](https://github.com/hysalim/angular-material-components/tree/main/projects/material-components/src/lib/avatar)
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
