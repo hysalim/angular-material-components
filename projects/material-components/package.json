@@ -1,0 +1,34 @@
+{
+  "name": "@hysalim/material-components",
+  "version": "0.0.1",
+  "description": "A library to complete the @angular/material library",
+  "author": {
+    "name": "Hysalim",
+    "email": "hysalimapp@gmail.com"
+  },
+  "license": "MIT",
+  "keywords": [
+    "angular",
+    "material",
+    "angular-material",
+    "typescript",
+    "components",
+    "banner",
+    "avatar"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hysalim/angular-material-components"
+  },
+  "bugs": {
+    "url": "https://github.com/hysalim/angular-material-components/issues"
+  },
+  "peerDependencies": {
+    "@angular/common": "^11.0.1",
+    "@angular/core": "^11.0.1",
+    "@angular/material": "^11.0.0"
+  },
+  "dependencies": {
+    "tslib": "^2.0.0"
+  }
+}

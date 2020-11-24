@@ -1,0 +1,20 @@
+import { Meta, Story } from '@storybook/addon-docs/blocks';
+import { moduleMetadata } from '@storybook/angular';
+import { MatAvatarModule } from '@hysalim/material-components';
+
+<Meta title="Example/Avatar" decorators={[
+  moduleMetadata({
+    declarations: [MatAvatarModule]
+  })
+]}/>
+
+# Avatar
+
+<Story name="test">{{
+  moduleMetadata: {
+    declarations: [MatAvatarModule]
+  },
+  template: `
+    <mat-avatar displayName="Scarlett JOHANSON"></mat-avatar>
+  `
+}}</Story>

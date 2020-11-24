@@ -1,0 +1,26 @@
+@use "../../../theme/avatar";
+
+.mat-avatar {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  @include avatar.small-size();
+  @include avatar.medium-size();
+  @include avatar.large-size();
+  @include avatar.elevation();
+  @include avatar.border-radius();
+
+  .mat-avatar__initials {
+    color: #FFF;
+    letter-spacing: 1px;
+  }
+
+  .mat-avatar__image {
+    position: absolute;
+    display: block;
+    object-fit: cover;
+  }
+}

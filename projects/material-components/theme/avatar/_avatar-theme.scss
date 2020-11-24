@@ -1,0 +1,29 @@
+@use "sass:map";
+@use "@angular/material/theming";
+
+@mixin _avatar-color($config-or-theme) {
+  $config: theming.mat-get-color-config($config-or-theme);
+  $primary: map.get($config, primary);
+  $accent: map.get($config, accent);
+  $warn: map.get($config, warn);
+
+  .mat-avatar {
+    &.mat-avatar--primary {
+      border: 2px solid theming.mat-color($primary);
+    }
+    &.mat-avatar--accent {
+      border: 2px solid theming.mat-color($accent);
+    }
+    &.mat-avatar--warn {
+      border: 2px solid theming.mat-color($warn);
+    }
+  }
+}
+
+@mixin avatar-theme($theme) {
+  $color: theming.mat-get-color-config($theme);
+
+  @if $color != null {
+    @include _avatar-color($color);
+  }
+}

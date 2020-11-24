@@ -1,0 +1,66 @@
+@use "~@angular/material/theming";
+
+$_elevation: 4;
+$_elevation-hover: 6;
+$_small-size: 40px;
+$_medium-size: 60px;
+$_large-size: 90px;
+$_border-radius: 50%;
+
+@mixin small-size($size: $_small-size) {
+  &.mat-avatar--small {
+    height: $size;
+    width: $size;
+    .mat-avatar__image {
+      height: $size;
+      width: $size;
+    }
+    .mat-avatar__initials {
+      font-size: .75rem;
+    }
+  }
+}
+
+@mixin medium-size($size: $_medium-size) {
+  &.mat-avatar--medium {
+    height: $size;
+    width: $size;
+    .mat-avatar__image {
+      height: $size;
+      width: $size;
+    }
+    .mat-avatar__initials {
+      font-size: 1.125rem;
+    }
+  }
+}
+
+@mixin large-size($size: $_large-size) {
+  &.mat-avatar--large {
+    height: $size;
+    width: $size;
+    .mat-avatar__image {
+      height: $size;
+      width: $size;
+    }
+    .mat-avatar__initials {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+@mixin border-radius($radius: $_border-radius) {
+  border-radius: $radius;
+}
+
+@mixin elevation($elevation: $_elevation, $hover: null) {
+  @include theming.mat-elevation-transition;
+  @if $hover != null {
+    &:hover {
+      @include theming.mat-elevation($elevation);
+    }
+  }
+  @else {
+    @include theming.mat-elevation($elevation);
+  }
+}

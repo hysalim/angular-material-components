@@ -1,0 +1,6 @@
+<img [@imgLoad]="(imgIsVisible$ | async) ? 'load' : 'unload'"
+  class="mat-avatar__image"
+  [src]="profilImage"
+  (load)="onLoad($event.returnValue)"
+  role="img" alt="">
+<div class="mat-avatar__initials">{{initials}}</div>
